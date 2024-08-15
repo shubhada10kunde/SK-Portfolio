@@ -7,8 +7,8 @@ import emailjs from "emailjs-com";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
+    user_name: "",
+    user_email: "",
     subject: "",
     message: "",
   });
@@ -28,23 +28,28 @@ const Contact = () => {
 
     // EmailJS service details
     emailjs
-      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", e.target, "YOUR_USER_ID")
+      .sendForm(
+        "service_bp8qvpt",
+        "template_98owhl9",
+        e.target,
+        "n_Sh4pfq6xfiQOWfi"
+      )
       .then(
         (result) => {
           console.log(result.text);
-          setSubmitStatus(
-            "Thank you for your message! We'll get back to you soon."
-          );
+          alert("Message sent successfully!");
+          // setSubmitStatus("Message sent successfully!");
           setFormData({
-            name: "",
-            email: "",
+            user_name: "",
+            user_email: "",
             subject: "",
             message: "",
           });
         },
         (error) => {
           console.log(error.text);
-          setSubmitStatus("There was an error. Please try again.");
+          alert("There was an error. Please try again.");
+          // setSubmitStatus("There was an error. Please try again.");
         }
       );
   };
@@ -75,8 +80,8 @@ const Contact = () => {
         <form onSubmit={handleSubmit}>
           <input
             type="text"
-            name="name"
-            value={formData.name}
+            name="user_name"
+            value={formData.user_name}
             onChange={handleChange}
             placeholder="Enter Your Name"
             required
@@ -84,8 +89,8 @@ const Contact = () => {
           />
           <input
             type="email"
-            name="email"
-            value={formData.email}
+            name="user_email"
+            value={formData.user_email}
             onChange={handleChange}
             placeholder="Enter Your Email"
             required
@@ -111,7 +116,7 @@ const Contact = () => {
           />
           <input type="submit" value="Send" className="send" />
         </form>
-        {submitStatus && <p className="submit-status">{submitStatus}</p>}
+        {/* {submitStatus && <p className="submit-status">{submitStatus}</p>} */}
       </div>
     </section>
   );
