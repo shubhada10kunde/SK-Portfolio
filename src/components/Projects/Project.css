@@ -1,0 +1,95 @@
+:root {
+    --main-color: #0ef;
+    /* --bg-color: black; */
+}
+
+.maintext {
+   margin-top: 150px;
+}
+
+.maintext h2{
+    margin-bottom: 70px;
+}
+
+
+.portfolio-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(359px, 1fr));
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.row {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    border-radius: 0.65rem;
+    border: 1.5px solid #0ef;
+    padding: 2.5rem;
+    backdrop-filter: blur(1rem);
+    transition: all 0.3s ease;
+
+    
+}
+
+.row img{
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.5s;
+   
+}
+
+.row:hover,
+.row.active {
+    /* background-color: #0ef; */
+    /* background: linear-gradient(180deg, rgb(139, 247, 255) 0%, #0ef 100%); */
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+.prj-heading {
+    font-size: 24px;
+    color: #0ef;
+}
+
+.layer p{
+    margin-top: 18px;
+    font-size: 18px;
+}
+
+.git{
+    color: rgb(0, 42, 255);
+    font-size: 20px;
+    margin-top: 17px;
+}
+/* .layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.1), #0ef);
+    position: absolute;
+    border-radius: 8px;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 40px;
+    transition: height 0.5s;
+}
+
+.layer h5 {
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.layer p{
+    color: black;
+    font-size: 1rem;
+    line-height: 1.8;
+} */
+

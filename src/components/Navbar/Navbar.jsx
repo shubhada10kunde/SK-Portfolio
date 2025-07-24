@@ -11,29 +11,29 @@ const Navbar = () => {
 
           <ul>
             <li>
-              <Link to="/" className="menu-item">
+              <a href="#home" className="menu-item">
                 Home
-              </Link>
+              </a>
             </li>
             <li>
-              <Link to="/aboutme" className="menu-item">
+              <a href="#about" className="menu-item">
                 About
-              </Link>
+              </a>
             </li>
             <li>
-              <Link to="/skills" className="menu-item">
+              <a href="#skills" className="menu-item">
                 Skills
-              </Link>
+              </a>
             </li>
             <li>
-              <Link to="/projects" className="menu-item">
+              <a href="#projects" className="menu-item">
                 Projects
-              </Link>
+              </a>
             </li>
             <li>
-              <Link to="/contact" className="menu-item">
+              <a href="#contact" className="menu-item">
                 Contact
-              </Link>
+              </a>
             </li>
           </ul>
         </div>

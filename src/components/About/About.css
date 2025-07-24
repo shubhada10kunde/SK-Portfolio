@@ -1,0 +1,170 @@
+:root {
+    --main-color: #0ef;
+    --bg-color: black;
+}
+
+.aboutsection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 100px;
+}
+
+.about {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.timeline-items {
+    /* flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    border-left: 2px solid #ccc; */
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    margin-left: 500px;
+}
+
+h2 span {
+    color: #0ef; /* Optional: Highlight color for "Me" */
+    
+  }
+
+h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1px;
+    color:  #0ef;
+    margin-top: 10px;
+  }
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    
+  }
+
+  .resume-btn {
+    margin-top: 25px;
+    height: 40px;
+    color: black;
+    font-size: 18px;
+    font-weight:bolder;
+    background: #0ef;
+    border-radius: 10px;
+    border: 2px solid #0ef;
+  }
+
+  .resume-btn:hover {
+    background-color: #0ef;
+    color: #081b29;
+    box-shadow: 0 0 20px #0ef;
+}
+
+  .heading {
+    font-size: 1.9rem;
+    margin-top: 40px; /* Adds space before the education heading */
+    color:  #0ef;
+    margin-left: 520px;
+    margin-bottom: 50px;
+  }
+
+  .timeline-items {
+    /* display: flex;
+    flex-direction: column; */
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background-color: var(--main-color);
+    left: calc(50% - 2.5px);
+    top: 0;
+    bottom: 0;
+    /* margin-bottom: 20px; */
+  }
+
+  .timeline-item {
+    margin-bottom: 40px;
+    width: 100%;
+    position: relative;
+  }
+
+  .timeline-heading {
+    color: #b7d23e;
+  }
+
+  .timeline-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .timeline-item:nth-child(odd) {
+    padding-right: calc(50% + 30px);
+    text-align: right;
+  }
+
+  .timeline-item:nth-child(even) {
+    padding-left: calc(50% + 30px);
+  }
+
+  .timeline-dot {
+    height: 21px;
+    width: 21px;
+    background-color: var(--main-color);
+    box-shadow: 0 0 25px var(--main-color),
+                0 0 50px var(--main-color);
+    position: absolute;     
+    left: calc(50% - 10.5px);
+    border-radius: 50%;  
+    top: 10px;     
+    z-index: 1;
+  }
+
+  .timeline-date {
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+    margin: 6px 0 15px;
+  }
+
+  .timeline-content {
+    background-color: var(--bg-color);
+    border: 3px solid var(--main-color);
+    padding: 30px 50px;
+    border-radius: 4rem;
+    box-shadow: 0 0 10px var(--main-color);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+
+  .timeline-content:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--main-color);
+  }
+
+  .timeline-content h3{
+    font-size: 20px;
+    color: white;
+    margin: 0 0 10px;
+    font-weight: 500;
+  }
+
+  .timeline-content p {
+    color: white;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+  }
